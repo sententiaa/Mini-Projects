@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.pixel1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(45, 45, 45);
+}
+
+.pixel2 {
+  position: absolute;
+  width: 750px;
+  height: 400px;
+  margin-left: 500px;
+  margin-top: 0px;
+  background-color: rgb(42, 42, 42);
+}
+
+.pixel3 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin-left: 600px;
+  margin-top: 218px;
+  background-color: rgb(46, 46, 46);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: rgb(40, 40, 40);
+}
+
+.app1 {
+  position: absolute;
+  background-color: rgb(65, 65, 65);
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.app2 {
+  position: absolute;
+  background-color: rgb(65, 65, 65);
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+a {
+  text-decoration-line: none;
+  color: rgb(150, 150, 150);
+}
