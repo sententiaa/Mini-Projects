@@ -2,7 +2,7 @@
 Mini Projects or Apps I make I don't need anymore or just wanting to share.
 
 All Projects Can Be Found At
-[Mini Projects]()
+[Mini Projects](https://sententiaa.github.io/Mini-Projects/)
 
 
 Projects
