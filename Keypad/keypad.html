@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <title>Keypad :: Mini Project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav class="container">
+      <nav class="codebar">
+        <label id="code">0 0 0 0</label>
+        <label id="codenotice"></label>
+      </nav>
+      <hr class="sector">
+      <nav class="buttonbar">
+        <button id="button1" onclick="input(1)">1</button>
+        <button id="button2" onclick="input(2)">2</button>
+        <button id="button3" onclick="input(3)">3</button>
+        <button id="button4" onclick="input(4)">4</button>
+        <button id="button5" onclick="input(5)">5</button>
+        <button id="button6" onclick="input(6)">6</button>
+        <button id="button7" onclick="input(7)">7</button>
+        <button id="button8" onclick="input(8)">8</button>
+        <button id="button9" onclick="input(9)">9</button>
+      </nav>
+    </nav>
+  </body>
+  <script>
+    var a = 0
+    var b = 0
+    var c = 0
+    var d = 0
+ 
+    var afilled = false
+    var bfilled = false
+    var cfilled = false
+    var dfilled = false
+ 
+    // Note #3 :: Also you can make more digits required per code by increasing the number of 0's in the html, adding more letter variables and lastly, changing the function that writes the a,b,c,d to the innerHTML on line 94.
+ 
+    function check(a_i, b_i, c_i, d_i) {
+      if (a_i == 3 && b_i == 1 && c_i == 1 && d_i == 6) { 
+        // Note #1 :: You can insert more codes with else if's or you can run through a table of codes and check if a,b,c,d or a_i,b_i,c_i,d_i is equal to anyone of them
+        // Note #2 :: Also i just checked a_i, b_i, c_i, d_i to make sure a,b,c,d didnt change before i got to check the answers
+        console.log("logged")
+        document.getElementById("codenotice").innerHTML = "Redeemed Code"
+        setTimeout(function(){
+          document.getElementById("codenotice").innerHTML = ""
+        }, 1000);
+      } else {
+        document.getElementById("codenotice").innerHTML = "Invalid Code"
+        setTimeout(function(){
+          document.getElementById("codenotice").innerHTML = ""
+        }, 1000);
+      }
+    }
+ 
+    function clear() {
+      afilled = false
+      bfilled = false
+      cfilled = false
+      dfilled = false
+      a = 0
+      b = 0
+      c = 0
+      d = 0
+    }
+ 
+    function enter(input) {
+      if (afilled == false) {
+        a = input
+        afilled = true
+      } else if (afilled == true && bfilled == false) {
+        b = input
+        bfilled = true
+      } else if (bfilled == true && cfilled == false) {
+        c = input
+        cfilled = true
+      } else if (cfilled == true && dfilled == false) {
+        d = input
+        afilled = true
+        bfilled = true
+        cfilled = true
+        dfilled = true
+        check(a, b, c, d)
+        clear()
+      }
+      document.getElementById("code").innerHTML = a + " " + b + " " + c + " " + d
+      console.log(a,b,c,d)
+    }
+ 
+    function input(i_i) {
+      switch(i_i) {
+        case 1:
+          enter(1)
+          break;
+        case 2:
+          enter(2)
+          break;
+        case 3:
+          enter(3)
+          break;
+        case 4:
+          enter(4)
+          break;
+        case 5:
+          enter(5)
+          break;
+        case 6:
+          enter(6)
+          break;
+        case 7:
+          enter(7)
+          break;
+        case 8:
+          enter(8)
+          break;
+        case 9:
+          enter(9)
+          break;
+      }
+    }
+  </script>
+</html>
